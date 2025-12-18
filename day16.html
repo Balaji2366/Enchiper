@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.i p{
+    color: blue;
+}
+.j>h1{
+    color: red;
+}
+p+h1{
+    color: yellow;
+}
+.l h1~p{
+    color: green;
+}
+.h{
+    text-align: center;
+}
+a:visited {
+  color: #FF0000;
+}
+a:hover {
+  color: yellow;
+  cursor: pointer;
+}
+a:active {
+  color: #0000FF;
+}
+.n p::first-line{
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+img {
+  opacity: 1.0;
+}
+img:hover {
+  opacity: 0.1;
+  cursor: pointer;
+}
+.i {
+  opacity: 0.3;
+}
+.i:hover {
+  opacity: 1.0;
+
+}
+    </style>
+</head>
+<body>
+    <h1 class="h">CSS Combinators</h1>
+<div class="i">
+    <p>hi this is a Descendant Combinator</p>
+    <p>hi this is a Descendant Combinator</p>
+    <p>hi this is a Descendant Combinator</p>
+    <p>hi this is a Descendant Combinator</p>
+</div>
+<hr>
+<div class="j">
+    <p>hi this is a Child Combinator </p>
+    <p>hi this is a Child Combinator </p>
+    <p>hi this is a Child Combinator </p>
+    <p><h1>hi this is a Child Combinator </h1></p>
+</div>
+<hr>
+<div class="k">
+    <h1>hi this is a General Sibling Combinator </h1>
+    <p>hi this is a General Sibling Combinator </p>
+    <p>hi this is a General Sibling Combinator </p>
+    <p>hi this is a General Sibling Combinator </p>
+    <h1>hi this is a General Sibling Combinator </h1>
+</div>
+<hr>
+<div class="l">
+    <p>hi this is an Subsequent-sibling Combinator </p>
+    <h1>hi this is an Subsequent-sibling Combinator </h1>
+    <p>hi this is an Subsequent-sibling Combinator </p> 
+    <h1>hi this is an Subsequent-sibling Combinator </h1>
+</div>
+<hr>
+<div class="m">
+    <h1>CSS Pseudo-classes</h1>
+    <a  href="./day15/chat.html"><h1>This is a link</h1></a><br>
+</div>
+<hr>
+<div class="n">
+    <h1>CSS Pseudo-element</h1>
+    <p>    <i>"Definite article" redirects here. For the comedy album, see</i> <a href=""> Definite Article</a>.<br><br>
+A <b>definite article</b>  is an article that marks a <a href="">definite noun phrase</a>. Definite articles, such as <a href=""><i>the </i></a>English the, are used to refer to a particular member of a group. It may be something that the speaker has already mentioned, or it may be something uniquely specified.<br><br>
+For example, Sentence 1 uses the definite article and thus expresses a request for a particular book. In contrast, Sentence 2 uses an indefinite article and thus conveys that the speaker would be satisfied with any book.<br><br>
+<ol>
+<li>Give me the book.</li>
+ <li>Give me a book.</li>
+</ol>
+The definite article can also be used in English to indicate a specific class among other classes:<br><br>
+<i><b>The</b> cabbage white butterfly lays its eggs on members of <b>the</b> Brassica genus</i>.<br><br>
+However, recent developments show that definite articles are morphological elements linked to certain noun types due to <a href="">lexicalization</a>. Under this point of view, definiteness does not play a role in the selection of a definite article more than the lexical entry
+attached to the article [<a href="">clarification needed</a>]<a href=""> [1][2]</a></p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2O_LNjjFZA-9zilxf8EzSINyWXMTgzkU4WprwnwGmyPI44kGA5vdijBH1SS5krIIhdzbjKOj0xf-1-TAp8xu7t9_asJfLC0-QUYpJ5q8&s=10">
+
+</div>
+</body>
+</html>
