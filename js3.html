@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         //Welcome Message Based on Time
+//         let hour=prompt("Enter current hour:");
+//         function Msg(time) {
+//     if (time>=5 && time<12) {
+//       alert("Good Morning");
+//     } 
+//     else if (time>=12 && time<17) {
+//       alert("Good Afternoon");
+//     } 
+//     else if (time>=17 && time<=23) {
+//       alert("Good Evening");
+//     } 
+//     else {
+//       alert("Invalid hour entered");
+//     }
+//   }
+//   Msg(hour);
+// //Positive, Negative, or Zero
+//  let num=prompt("Enter a number:");
+//   if (num > 0) {
+//     alert("The number is Positive");
+//   } 
+//   else if (num < 0) {
+//     alert("The number is Negative");
+//   } 
+//   else {
+//     alert("The number is Zero ");
+//   }
+// //Simple Attendance Checker
+//  let total=prompt("Enter total number of classes:");
+//   let attended=prompt("Enter number of classes attended:");
+//   let attendance=(attended/total)*100;
+//   if(attendance>= 75){
+//     alert("You are eligible to attend the exam ");
+//   } 
+//   else {
+//     alert("You are NOT eligible to attend the exam ");
+//   }   
+// //Largest Number in a Range
+// let limit=prompt("How many numbers do you want to enter?");
+//   let largest;
+//   for (let i = 1; i <= limit; i++) {
+//     let num =prompt("Enter number " + i + ":");
+// if(i==1) {
+//       largest = num;
+//     } 
+// else if(num > largest) {
+//       largest = num;
+//     }
+//   }
+//   alert("The largest number entered is: " + largest);
+// // temperature convertor
+// let choice = prompt("1. C to F 2.F to C");
+// let temp = prompt("Enter the temperature value:");
+//   function convert(a,b) {
+//     let result;
+//     if (a=="1") {
+//       result = (b * 9/5)+32;
+//       alert(result+ "°F");
+//     } 
+//     else if (a=="2") {
+//       result = (b- 32)*5/9;
+//       alert(result + "°C");
+//     } 
+//     else {
+//       alert("Invalid choice");
+//     }
+// }
+//  convert(choice, temp);
+//  //Count Vowels in a String
+//  let text=prompt("Enter a string:");
+//   let Count = 0;
+//   let vowels = "aeiouAEIOU";
+//   for (let i=0; i<text.length;i++) {
+//     if (vowels.includes(text[i])) {
+//       Count++;
+//     }
+//   }
+//   alert("Number of vowels in the string: " + Count);
+// 
+// //Find Smallest of Three Numbers
+// let x=(prompt("Enter first number:"));
+//   let y =(prompt("Enter second number:"));
+//   let z=(prompt("Enter third number:"));
+//   let small;
+//   if (x<y && x<z) {
+//     small=x;
+//   } 
+//   else if (y<x&& y<z) {
+//     small=y;
+//   } 
+//   else {
+//     small =z;
+//   }
+//   alert("the smallest number is "+ small)
+// // Bill calc
+// let items = prompt("Enter number of items:");
+//   let price =prompt("Enter price per item:");
+//   let total= items * price;
+//   alert("Total Bill Amount is: ₹" + total);
+// // leap year
+// let year =prompt("Enter a year:");
+// if(year % 4==0){
+//     alert("leap year");
+// }
+// else{
+//     alert("Not a leap year");
+// }
+// // Count Odd Numbers
+// let limit =prompt("Enter the limit:");
+//   let count = 0;
+//   for (let i=1;i<=limit;i++) {
+//     if (i%2!=0) {
+//       count++;
+//     }
+//   }
+//   alert(count);
+// //palindrome
+// let a=prompt("Enter a number or a string:");
+//   function Palindrome(value) {
+//     let b= value;
+//     let c= "";
+//     for (let i =value.length - 1; i >= 0; i--) {
+//       c+=b[i];
+//     }
+//     if (b==c) {
+//         alert( "Palindrome");
+//     } else {
+//       alert(" NOT a Palindrome ");
+//     }
+//   }
+// Palindrome(a)
+// power
+// let a= Number(prompt("Enter the base:"));
+//   let b= Number(prompt("Enter the exponent:"));
+//   let result = 1;
+//   for (let i=1;i<=b;i++) {
+//     result*=a;
+//   }
+// //   alert(result);
+// let m1 = Number(prompt("Enter marks for Subject 1:"));
+//   let m2 = Number(prompt("Enter marks for Subject 2:"));
+//   let m3 = Number(prompt("Enter marks for Subject 3:"));
+//   let total = m1 + m2 + m3;
+//   let average = total / 3;
+//   let result;
+//   if (m1 >= 50 && m2 >= 50 && m3 >= 50) {
+//     result = "PASS";
+//   } else {
+//     result = "FAIL";
+//   }
+//   alert(
+//     "Total Marks: " + total +
+//     "\nAverage Marks: " + average+
+//     "\nResult: " + result);
+// //Currency Converter
+// let a= Number(prompt("Enter amount in Rupees:"));
+//   let b= 83;
+//   let c = a/b;
+//   alert( " $" + c);
+// //sum of digits
+// let num = Number(prompt("Enter a number:"));
+//   let sum = 0;
+//   while (num > 0) {
+//     sum += num % 10;
+//     num = Math.floor(num / 10);
+//   }
+//   alert("Sum of digits " + sum);
+// //do while menu
+// let choice;
+
+//   do {
+//     choice = prompt("Menu:\n1. Say Hello\n2. Say Bye\n3. Exit");
+//     if (choice =="1") {
+//       alert("Hello");
+//     } 
+//     else if (choice =="2") {
+//       alert("Bye");
+//     }
+//   } while (choice !=="3");
+
+//   alert("Exited Menu");
+// //average of n num
+// let n = Number(prompt("How many numbers?"));
+//   let sum = 0;
+//   for (let i=0;i<n;i++) {
+//     let num = Number(prompt("Enter number " + i + ":"));
+//     sum += num;
+//   }
+//   let average = sum / n;
+//   alert("Average is: " + average);
+//Check Divisibility (3, 5, or Both)
+let num = Number(prompt("Enter a number:"));
+
+  if (num%3==0 && num%5==0) {
+    alert("Divisible by both 3 and 5");
+  } 
+  else if (num%3==0) {
+    alert("Divisible by 3");
+  } 
+  else if (num%5==0) {
+    alert("Divisible by 5");
+  } 
+  else {
+    alert("Not divisible by 3 or 5");
+  }
+  //login attempt
+   let attempts = 0;
+        let success = false;
+        while (attempts < 3) {
+            let pwd = prompt("Enter password:");
+            if (pwd === "admin123") {
+                success = true;
+                break;
+            }
+            attempts++;
+        }
+        alert(success ? "Login Successful" : "Account Locked");
+  </script>
+</head>
+<body>
+    
+</body>
+</html>
