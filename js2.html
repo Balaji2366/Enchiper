@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script || Day2</title>
+    <script>
+        // User Greeting
+        const name=prompt("Enter your name");
+        const greet=(name) => alert("Hello "+ name+ " welcome to website !!!");
+        greet(name);
+        // Even or Odd Checker
+        const a=prompt("Enter the Number");
+        function oddoreven(a){
+            if(a%2==0){
+                alert("the given number is even");
+            }
+            else{
+                alert("the given number is odd");
+            }
+        }
+        oddoreven(a);
+        // calc
+        const n1=prompt("Enter the first Number");
+        const n2=prompt("Enter the second Number");
+        const oper=prompt("Enter the operator :");
+        let n3;
+          if (oper === "+") {
+    n3= n1 + n2;
+  } 
+  else if (oper === "-") {
+    n3= n1 - n2;
+  }
+  else if (oper === "*") {
+    n3 = n1 * n2;
+  } 
+  else if (oper === "/") {
+    if (n2 !== 0) {
+      n3 = n1 / n2;
+    } else {
+      alert("Error: Division by zero");
+    }
+  } 
+  else {
+    alert("Invalid operator");
+  }
+   if (n3 !== undefined) {
+    alert("Result: " + n3);
+  }
+//   age eligible
+let age =(prompt("Enter your age:"));
+if (age >= 18) {
+    alert("You are eligible to vote ");
+  } 
+  else {
+    alert("You are not eligible to vote ");
+  }
+  //Number Table Generator
+  const num=(prompt("Enter your number:"));
+        for(let i=1;i<=10;i++){
+            let num2=i*num;
+            console.log(i + "*" + num +"=" +num2 );
+        }
+        //  the sum of numbers
+         let t = Number(prompt("Enter the limit:"));
+  function sum(l) {
+    let s=0;
+
+    for (leti=1;i<=l;i++) {
+      s+=i;
+    }
+
+    return s;
+  }
+  let t1=sum(t);
+  console.log(t1);
+//   password validation
+let p=prompt("Enter your password:");
+  if (p.length>=8) {
+    alert("Password is valid");
+  } else {
+    alert("Password is invalid");
+  }
+  //Grade calc
+let mark=prompt("Enter your marks (0 - 100):");
+  let grade;
+  if (mark>=90&&mark<= 100) {
+    grade = "A";
+  } 
+  else if(mark>=75&& marks<90) {
+    grade = "B";
+  } 
+  else if(mark>=50&&mark< 75) {
+    grade = "C";
+  } 
+  else{
+    grade = "Fail";
+  } 
+    alert("Your Grade is: " + grade);
+
+//Find Largest of Three Numbers
+let x=(prompt("Enter first number:"));
+  let y =(prompt("Enter second number:"));
+  let z=(prompt("Enter third number:"));
+  let largest;
+  if (x>=y && x>=z) {
+    largest=x;
+  } 
+  else if (y>=x&& y>=z) {
+    largest =y;
+  } 
+  else {
+    largest =z;
+  }
+  alert("the largest number is "+ largest)
+//Count Even Numbers
+let t2= Number(prompt("Enter the limit:"));
+let count= 0;
+for (let i=1;i<=t2; i++) {
+    if(i%2==0) {
+      count++;
+    }
+  }
+  alert(count);
+//prime number
+ let num = (prompt("Enter a number:"));
+  let counts = 0;
+  if (num<=1) {
+    alert("the number is NOT a Prime Number");
+  } else {
+    for (let i=1;i<=num;i++) {
+      if (num%i==0) {
+        counts++;
+      }
+    }
+    if (counts==2) {
+      alert("The number is a Prime Number");
+    } else {
+      alert("The number is NOT a Prime Number");
+    }
+  }
+  //Factorial
+  let n =(prompt("Enter a number:"));
+    if (n<0) {
+    alert("negative numbers");
+  } else {
+    let fact=1;
+    for (let i=1;i<=n;i++) {
+      fact*= i;
+    }
+    alert("Factorial is "+ fact);
+  }
+  //Find Sum of Even and Odd Numbers
+  let l1 =(prompt("Enter the limit:"));
+  let evenSum = 0;
+  let oddSum = 0;
+  for (let i=1;i<= l1;i++) {
+    if (i%2==0) {
+      evenSum+=i;
+    } else {
+      oddSum+=i;
+    }
+  }
+alert("Sum of Even Numbers: " + evenSum );
+alert("Sum of Odd Numbers: " + oddSum);
+//login system
+let Username= "balaji";
+  let Password = "12345";
+ let username1= prompt("Enter username:");
+  let password1= prompt("Enter password:");
+  if (username1==Username && password1==Password) {
+    alert("Login Successful");
+  } else {
+    alert("Invalid Username or Password");
+  }
+//Reverse a Number
+let tab=prompt("Enter a number:");
+function reverseNumber(n) {
+    let reverse = 0;
+    while (n > 0) {
+      reverse = reverse * 10 + (n % 10);
+      n = Math.floor(n / 10);
+    }
+    return reverse;
+  }
+let res= reverseNumber(tab);
+  alert("Reversed number is: " + res);
+//Simple Interest Calculator
+let p=prompt("Enter the principal amount:");
+  let r=prompt("Enter the rate of interest:");
+  let t=prompt("Enter the time ");
+  let am;
+  function SI(p, r, t) {
+     let am;
+    am=(p * r * t) / 100;
+    return am;
+  }
+  re=SI(p,r,t);
+  alert("Simple Interest is: " +re);
+  //Number Guessing Game
+  let secret = 4;
+  let guess =prompt("Enter the number:");
+  if (guess==secret) {
+    alert("Correct!");
+  } else if (guess>secret) {
+    alert("Too High!");
+  } else if (guess<secret) {
+    alert("Too Low!");
+  } else {
+    alert("Invalid input");
+  }
+//Count Digits in a Number
+let num=prompt("Enter a number:");
+let count=0;
+if (num==0) {
+    count=1;
+  } 
+while(num>0){
+      count++;
+      num=Math.floor(num / 10);
+    }
+alert("Number of digits:" + count);
+//Menu-Driven Calculator
+let choice = prompt("Choose an operation:1. Add,2. Subtract,3. Multiply");
+let a =prompt("Enter first number:");
+let b = prompt("Enter second number:");
+function add(x, y) {
+    return x + y;
+  }
+  function subtract(x, y) {
+    return x - y;
+  }
+  function multiply(x, y) {
+    return x * y;
+  }
+  let result;
+switch (choice) {
+    case "1":
+      result = add(a, b);
+      alert("Addition Result: " + result);
+      break;
+
+    case "2":
+      result = subtract(a, b);
+      alert("Subtraction Result: " + result);
+      break;
+
+    case "3":
+      result = multiply(a, b);
+      alert("Multiplication Result: " + result);
+      break;
+
+    default:
+      alert("Invalid choice");
+  }
+//Exit Confirmation Program
+let exitChoice = confirm("Do you want to exit?");
+  if (exitChoice) {
+    alert("Good Bye");
+  } else {
+    alert("Continue working");
+  }
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>
