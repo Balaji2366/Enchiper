@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //User Name Format
+        let username =prompt("Enter your username:");
+        let name =username.trim().toLowerCase()
+        alert("Format :"+name);
+        //Email Validation
+        let email=prompt("Enter your Email");
+        if(email.includes("@") && email.includes(".")){
+            alert("Email is Valid");
+        }
+        else{
+            alert("Enter the valid email");
+        }
+        //Character Count in Sentence
+        let a=prompt("Enter a sentence:");
+        let count= 0;
+         for(let i=0;i<a.length;i++){
+             if(a.charAt(i)!=" "){
+            count++;
+            }
+        }
+        alert("total character in the sentence :"+count);
+        //Word Counter
+        let paragraph = prompt("Enter a paragraph:");
+        paragraph=paragraph.trim();
+        let words=paragraph.split(/\s+/);
+        let count=words.length;
+        alert("Total Sentence :"count)
+        //First and Last Character Finder
+        let str=prompt("Enter a string:");
+        if(str.length>0){
+        alert("First: " + str[0] + "    Last: " + str[str.length - 1]);
+        } 
+        else{
+        alert("Empty string");
+        }
+         //Replace Word in Sentence
+        let a=prompt("Enter sentence:");
+        let B=prompt("replace:");
+        let C=prompt("New word:");
+        let D=a.replace(B,C);
+        alert(D);
+        // String Length Validator
+        let a=prompt("Enter  text:");
+        if(a.length<5 || a.length>20){
+            alert("Error");
+        } else {
+            alert("Text valid");
+        }
+                //Count Uppercase Letters
+                let a=prompt("Enter a string:");
+                let c= 0;
+            for (let i=0;i<a.length;i++){
+            let ch=a[i];
+            if(ch>='A'&&ch<='Z'){
+              c++;
+            }
+          }
+          alert("Number of uppercase letters: "+c);
+        //Remove Special Characters
+        var str = prompt("Enter a String")
+        let sen = "";
+        for (let i = 0; i < str.length; i++) {
+            let n = str[i]
+            if (n >= 'a' && n <= 'z' || n >= 'A' && n <= 'Z' || n >= "0" && n <= "9" || n == " ") {
+                sen += n;
+            }
+        }
+        alert("Without Special Characters : " + sen);
+        //Check Starts With / Ends With
+        var str = prompt("Enter a string:");
+        var start = prompt("Enter starting word:");
+        var end = prompt("Enter ending word:");
+        if (str.startsWith(start) && str.endsWith(end)) {
+            console.log("Starts and ends correctly");
+        } else {
+            console.log("Condition not satisfied");
+        }
+        //Find Longest Word
+        var p = prompt("Enter the sentences")
+        var large = "";
+        var ch = p.split(" ")
+        for (let i = 0; i < ch.length; i++) {
+            if (ch[i].length > large.length) {
+                large += ch[i]
+            }
+        }
+        alert("Largest Word " + large)
+        //Convert Sentence to Title Case
+
+
+        //Mask Mobile Number
+        var mobile = (prompt("Enter the Number : "))
+        var mark = "*".repeat(mobile.length - 4) + mobile.slice(-4);
+        alert(mark)
+
+        //Find Repeated Characters
+        var str = prompt("Enter a String")
+        var rep = "";
+        for (let i = 0; i < str.length; i++) {
+            for (let j = i + 1; j < str.length; j++) {
+                if (str[i] == str[j]) {
+                    rep += str[i]
+                }
+            }
+        }
+        alert(rep)
+        //Count Vowels and Consonants
+        var str = prompt("Enter a Words")
+        var v = 0;
+        var c = 0;
+        for (let i = 0; i < str.length; i++) {
+            if ("AEIOUaeiou".includes(str[i])) {
+                v++;
+            }
+            else {
+                c++
+            }
+        }
+        alert("vowels " + v + " Consonants " + c)
+        //Remove Duplicate Words
+        let sentence = prompt("Enter your sentence here: ")
+        let res = ""
+        let word = sentence.split(" ")
+        for (i = 0; i < word.length; i++) {
+            if (!res.includes(word[i])) {
+                res += word[i] + " "
+            }
+        }
+        alert("Updated sentence: " + res.trim())
+        //Check Anagram (Basic)
+        let w1 = prompt("Enter first string");
+        let w2 = prompt("Enter second string");
+        let s1 = w1.toLowerCase().split("").sort().join("");
+        let s2 = w2.toLowerCase().split("").sort().join("");
+        if (s1.match(s2)) {
+            alert("Anagram");
+        } else {
+            alert("Not an Anagram");
+        }
+        //Trim and Compare Strings
+        var a = prompt("Enter a String A")
+        var b = prompt("Enter a String B")
+        if (a.trim() == b.trim()) {
+            alert("EQUAL")
+        }
+        else {
+            alert("NOT EQUAL")
+        }
+        //Extract Numbers from String
+        var str = prompt("Enter a string");
+        let n = '1234567890';
+        let store = '';
+        for (let i = 0; i < str.length; i++) {
+            if (n.includes(str[i])) {
+                store += str[i];
+            }
+        }
+        alert(store)
+        //Password Strength Checker (String-Based)
+        var pass = prompt("Enter a Password");
+        var word = false;
+        var num = false;
+        for (let i = 0; i < pass.length; i++) {
+            if (pass[i] >= "A" && pass[i] <= "Z") {
+                word = true;
+            }
+            if (pass[i] >= "0" && pass[i] <= "9") {
+                num = true;
+            }
+        }
+        if (pass.length >= 9 && word && num) {
+            alert("PASS Strong")
+        }
+        else {
+            alert("Weak PASS")
+        }
+    </script>
+</body>
+
+</html>
