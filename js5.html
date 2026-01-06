@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        #t7 {
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        #box1 {
+      width: 400px;
+      height: 250px;
+      border: 2px solid black;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+     #box2 {
+      width: 400px;
+      height: 250px;
+      border: 2px solid black;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #parent {
+      background-color: lightblue;
+    }
+
+    #child {
+ 
+      background-color: lightcoral;
+    }
+    #grandparent {
+    
+      background-color: lightgreen;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <h2>Button Click Alert</h2>
+    <button id="btn">Click Me</button>
+    <hr>
+    <h2>Change Background Color</h2>
+    <button id="colorbtn">Change Background</button>
+    <hr>
+    <h2>Show & Hide</h2>
+    <p id="t1">I am Balaji.</p>
+    <button id="showbtn">Show</button>
+    <button id="hidebtn">Hide</button>
+    <hr>
+    <div id="t3">
+        <h2>Double-click</h2>
+    </div>
+    <hr>
+    <h2>increase the font size</h2>
+    <p id="t5">Hi..!,I Am Balaji From Tiruppur</p>
+    <hr>
+    <h2>Change Box Color on Mouse Enter & Leave</h2>
+    <div id="box"></div>
+    <hr>
+    <h2>Tooltip on Mouse Hover</h2>
+    <button id="btn1">Hover Me</button>
+    <div id="t7">Click this button to submit</div>
+    <hr>
+    <h2>Display Mouse X and Y Coordinates Inside a Div</h2>
+    <div id="box1">X: 0 , Y: 0</div>
+    <hr>
+    <h2>Change Background Color on Mouse Move</h2>
+    <div id="box2"></div>
+    <hr>
+    <h2>Right-click is disabled on this page</h2>
+    <hr>
+    <h2>Press any key on the keyboard</h2>
+<h3 id="t8">Key pressed: </h3>
+<hr> -->
+<!-- <h2>Change Input Text Color on Key Release</h2>
+<input type="text" id="ff" placeholder="Type something..." > -->
+<!-- <hr>
+<h2>Prevent Form Reload on Submit</h2>
+<form id="Form">
+  <input type="text" placeholder="Enter name"><br><br>
+  <input type="password" placeholder="enter password"><br><br>
+  <button type="submit">Submit</button>
+</form> -->
+ <!-- <hr>
+ <h2> the webpage background color based on dropdown selection.</h2>
+ <select id="Select">
+  <option value="">-- Select an option --</option>
+  <option value="red">red</option>
+  <option value="black">black</option>
+  <option value="yellow">yellow</option>
+</select>
+<hr> -->
+<!-- <h2> input field when it gets focus and remove the highlight on blur.</h2>
+<input type="text" id="inp" placeholder="enter name">
+<hr> -->
+<!-- <h2> to display a message when the input field gains focus and hide it </h2>
+<input type="text" id="inp" placeholder="enter name">
+<p id="p"></p>
+<hr> -->
+<!-- <h2>to display the text typed by the user in real time.
+</h2>
+<input type="text" id="text" placeholder="enter the text">
+<p id="p"></p>
+<hr>
+<h2>to count and display the number of characters entered </h2>
+<input type="text" id="text" placeholder="enter the text">
+<p id="p"></p>
+<hr>
+<h2>Display Event Type and Target Element</h2>
+<button id="myBtn">Click Me</button>
+<p id="output"></p>
+<hr> -->
+<!-- <button class="btn">Button 1</button>
+<button class="btn">Button 2</button>
+<button class="btn">Button 3</button>
+<p id="output"></p> -->
+<!-- <hr>
+<div id="parent">
+  Parent Div
+  <div id="child">Child Div</div>
+</div>
+<hr>
+<div id="grandparent">
+    grandparent Div
+<div id="parent">
+  Parent Div
+  <div id="child">Child Div</div>
+</div>
+</div> -->
+<hr>
+<div id="parent">
+  Parent Div
+  <div id="child">Child Div</div>
+</div>
+
+
+
+    <script>
+        // //Button Click Alert
+        // let b1 = document.getElementById("btn");
+        // b1.addEventListener("click", () => {
+        //     alert("Button was clicked!");
+        // });
+        // //Page Loaded
+        // window.addEventListener("load", () => {
+        //     console.log("Page Loaded");
+        // });
+        // //Change Background Color
+        // let b2 = document.getElementById("colorbtn");
+        // b2.addEventListener("click", () => {
+        //     document.body.style.backgroundColor = "lightblue";
+        // });
+        // //Show & Hide
+        // let t2 = document.getElementById("t1");
+        // let show = document.getElementById("showbtn");
+        // let hide = document.getElementById("hidebtn");
+        // show.addEventListener("click", () => {
+        //     t2.style.display = "block";
+        // });
+        // hide.addEventListener("click", () => {
+        //     t2.style.display = "none";
+        // });
+        // //Change Text on Double Click
+        // let t4 = document.getElementById("t3");
+        // t4.addEventListener("dblclick", () => {
+        //     t4.textContent = "Text changed";
+        // });
+        // //increase the font size
+        // let t6 = document.getElementById("t5");
+        // t6.addEventListener("dblclick", () => {
+        //     t6.style.fontSize = "20px";
+        // });
+        // //Change Box Color on Mouse Enter & Leave
+        // let box = document.getElementById("box");
+        // box.addEventListener("mouseenter", () => {
+        //     box.style.backgroundColor = "orange";
+        // });
+        // box.addEventListener("mouseleave", () => {
+        //     box.style.backgroundColor = "lightgray";
+        // });
+        // //Tooltip on Mouse Hover
+        // let button = document.getElementById("btn1");
+        // let t7 = document.getElementById("t7");
+        // button.addEventListener("mouseenter", function () {
+        //     t7.style.display = "block";
+        // });
+        // button.addEventListener("mouseleave", function () {
+        //     t7.style.display = "none";
+        // });
+        // //Display Mouse X and Y Coordinates Inside a Div
+        // let box1 = document.getElementById("box1");
+        // box1.addEventListener("mousemove",(e)=> {
+        //     let x = e.offsetX;
+        //     let y = e.offsetY;
+        //     box1.textContent = "X: " + x + " , Y: " + y;
+        // });
+        // //Change Background Color on Mouse Move
+        // let box2 = document.getElementById("box2");
+        // box2.addEventListener("mousemove",(ev)=> {
+        //     let x = ev.offsetX;
+        //     let y = ev.offsetY;
+        //     let r=x%256;
+        //     let g=y%256;
+        //     let b=(x+y)%256;
+        //     console.log(r,g,b)
+        //     box2.style.backgroundColor="rgb("+ r + "," +  g +"," + b +")";
+        // });
+        // // //Right-click is disabled on this page
+        // // window.addEventListener("contextmenu",(eve)=>{
+        // //     eve.preventDefault();
+        // //     alert("Right-click is disabled on this page")
+        // // });
+        // //Press any key on the keyboard
+        // let t8=document.getElementById("t8");
+        // document.addEventListener("keydown" , (e)=>{
+        //     t8.innerText="KEYPRESSED :"+e.key
+        // })
+        // //Change Input Text Color on Key Release
+        // let ff=document.getElementById("ff");
+        // document.addEventListener("keyup" ,(e)=>{
+        //     ff.style.color="blue";
+        // })
+// //Prevent Form Reload on Submit
+// let form = document.getElementById("Form");
+// form.addEventListener("submit",(e) =>{
+//     e.preventDefault();
+//     alert("submit without this page cannot reload");
+// });
+// //Validate Empty Input Before Form Submit
+// let form=document.getElementById("Form");
+// let name=document.getElementById("name");
+// form.addEventListener("submit",(e)=>{
+//     if(name.value==""){
+//         e.preventDefault();
+//         alert("the name field is empty");
+//     }
+//     else{
+//         alert("Submitted sucessfully");
+//     }
+// });
+// //Display Selected Dropdown Value
+// let select=document.getElementById("Select");
+// let op=document.getElementById("op");
+// select.addEventListener("change",()=>{
+//     op.textContent="Selected value: "+ select.value;
+// })
+// // the webpage background color based on dropdown selection.
+// let select=document.getElementById("Select");
+// select.addEventListener("change",()=>{
+//     document.body.style.backgroundColor=select.value;
+// });
+// // input field when it gets focus and remove the highlight on blur.
+// let inp=document.getElementById("inp");
+// inp.addEventListener("focus",()=>{
+//     inp.style.border="2px solid red"
+//     inp.style.backgroundColor="yellow"
+// })
+// inp.addEventListener("blur",()=>{
+//     inp.style.border="2px solid black"
+//     inp.style.backgroundColor="white"
+// })
+// // to display a message when the input field gains focus and hide it 
+// let inp=document.getElementById("inp");
+// let inp1=document.getElementById("p")
+// inp.addEventListener("focus",()=>{
+//     inp.style.border="2px solid red"
+//     inp.style.backgroundColor="yellow"
+//     inp1.textContent="you are now typing"
+// })
+// inp.addEventListener("blur",()=>{
+//     inp.style.border=""
+//     inp.style.backgroundColor=""
+//     inp1.textContent=""
+// })
+// //to display the text typed by the user in real time
+// let text=document.getElementById("text")
+// let inp1=document.getElementById("p")
+// text.addEventListener("keyup",()=>{
+//     inp1.textContent=text.value;
+// })
+//   //
+//   let buttons = document.querySelectorAll(".btn");
+//   let output = document.getElementById("output");
+//   buttons.forEach(function (button) {
+//     button.addEventListener("click", function (event) {
+//       output.textContent =
+//         "You clicked: " + event.target.textContent;
+//     });
+//   });
+//
+// document.getElementById("parent").addEventListener("click", function () {
+//     alert("Parent div clicked");
+//   });
+//   document.getElementById("child").addEventListener("click", function () {
+//     alert("Child div clicked");
+//   });
+//   //
+//   document.getElementById("grandparent").addEventListener("click", function () {
+//     alert("grand Parent div clicked");
+//   });
+//   document.getElementById("parent").addEventListener("click", function () {
+//     alert("Parent div clicked");
+//   });
+//   document.getElementById("child").addEventListener("click", function () {
+//     alert("Child div clicked");
+//   });
+  //
+//  
+//
+document.getElementById("parent").addEventListener("click", function () {
+    alert("Parent div clicked");
+  });
+document.getElementById("child").addEventListener("click", function (event) {
+    event.stopPropagation();   
+    alert("Child div clicked");
+  });
+    </script>
+
+</body>
+
+</html>
