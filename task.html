@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>registration form</h2>
+        <label>Name:</label> <input type="text" id="name" placeholder="enter your name"><br><br>
+        <label>Email:</label> <input type="email" id="email" placeholder="enter your email"><br><br>
+        <label>Password:</label> <input type="password" id="pass" placeholder="enter your password"><br><br>
+        <label>Date of Birth:</label> <input type="date" id="date" placeholder="enter your dob"><br><br>
+        Gender:
+        <input type="radio" name="g">Male
+        <input type="radio" name="g">Female
+        <input type="radio" name="g">Others<br><br>
+        <label>Address:</label> <textarea id="addr" placeholder="address"></textarea><br><br>
+        <label>Country:</label> <select id="country">
+            <option>Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select><br><br>
+        <input type="checkbox" id="check">I accept terms and conditions<br><br>
+        <button type="button" onclick="submit()">Submit</button>
+
+    </form>
+     <table id="t1" border="1">
+        <tr>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Address</th>
+        <th>Edit or Delete</th>
+        </tr>
+    </table>
+    </body>
+    <script>
+    let editindex=null;
+    function submit(){
+    let name=document.getElementById("name").value;
+    let pass=document.getElementById("pass").value;
+    let email=document.getElementById("email").value;
+    let date=document.getElementById("date").value;
+    let addr=document.getElementById("addr").value;
+    let country=document.getElementById("country").value;
+    let gender=document.querySelector('input[name="gender"]:checked');
+    let namepattern=/^[a-zA-Z0-9]{5,}$/;
+    let passpattern=/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    let emailpattern=/^[A-Za-z0-9_\-\.]*[@][a-Z]+[\.][a-z]{2,3}$/
+    if(!name||!pass||!email||!date||!addr||country==="Select Country"){
+        alert("All fields are mandatory");
+        return;
+    }
+    if(!namepattern.test(name)){
+        alert("Invalid name");
+        return;
+    }
+    if(!passpattern.test(pass)){
+        alert("Invalid password");
+        return;
+    }
+    if(!emailpattern.test(email)){
+        alert("Invalid email");
+        return;
+    }
+    let t1={
+        name,
+        pass,
+        email,
+        date,
+        gender:gender.value,
+        addr,
+        country
+    };
+    let t2=JSON.parse(localStorage.getItem("t1data"))||[];
+    if(editindex!==null){
+        t2[editindex]=t1;
+        editindex=null;
+    }else{
+    t2.push(t1);
+}
+localStorage.setItem("t1data",JSON.stringify(t2));
+loadTable();
+    }
+    function loadTable(){
+        let table=document.getElementById("t1");
+        table.innerHTML=`
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>Edit or Delete</th>
+            </tr>`;
+        let t2=JSON.parse(localStorage.getItem("t1data"))||[];
+        t2.forEach((t,index) => {
+            table.innerHTML+=`
+            <tr>
+            <td>${t.name}</td>
+            <td>${t.pass}</td>
+            <td>${t.email}</td>
+            <td>${t.date}</td>
+            <td>${t.gender}</td>
+            <td>${t.country}</td>
+            <td>${t.addr}</td>
+            <td>
+            <div class="button">
+            <button onclick="edit(${index})">Edit</button>
+            <button onclick="deletedata(${index})">Delete</button>
+            </div>
+            </td>
+            </tr>`;
+        });
+    }
+    function edit(index){
+        let t2=JSON.parse(localStorage.getItem("t1data"));
+        let t=t2[index];
+        document.getElementById("name").value=t.name;
+        document.getElementById("pass").value=t.pass;
+        document.getElementById("email").value=t.email;
+        document.getElementById("date").value=t.date;
+        document.getElementById("addr").value=t.addr;
+        document.getElementById("country").value=t.country;
+        document.querySelector(`input[name="gender"][value="${t.gender}"]`).checked=true;
+        editindex=index;
+    }
+    function deletedata(index){
+        let t2=JSON.parse(localStorage.getItem("t1data"));
+        t2.splice(index,1);
+        localStorage.setItem("t1data",JSON.stringify(t2));
+        loadTable();
+    }
+    window.onload=loadTable;
+</script>
+</html>
